@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id "io.spring.dependency-management" version "1.0.6.RELEASE"
+}
+
+apply plugin: 'application'
+
+group 'com.emramirez'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+mainClassName="com.emramirez.Application"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.springframework/spring-context
+    compile group: 'org.springframework', name: 'spring-context', version: '5.0.8.RELEASE'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
